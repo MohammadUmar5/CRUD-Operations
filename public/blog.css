@@ -1,0 +1,19 @@
+
+body{
+    font-family: "Roboto Serif", serif;
+    font-weight: 100;
+
+}
+.heading{
+    font-family: "Playfair Display", serif;
+}
+.card-title{
+    font-family: "Playfair Display", serif;
+
+}
+.contain {
+    width: 98%;
+    margin: 0 auto; 
+
+   
+}

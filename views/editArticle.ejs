@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="blog.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Edit Article</h1>
+        <a href="/blog" class="btn btn-primary mb-5">All Articles</a>
+    <form action="/editArticle" method="post">
+        <div class="form-group">
+          <label for="textInput">Title</label>
+          <input type="text" class="form-control" name="createText" id="textInput" placeholder="Enter text">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea   class="form-control" name="createDescription"  id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+       <button type="submit" class="btn btn-success mt-3 ">Submit</button>
+      </form>
+    </div>
+</body>
+</html>

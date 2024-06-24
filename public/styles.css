@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:  #214b23;
+    height: 40px;
+}
+.navBar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blueviolet; */
+    width: 155%;
+  margin-left: 20%;
+}
+.navBar ul li {
+list-style: none;
+    
+   color: aliceblue;
+    font-family: "Roboto Serif", serif;
+    font-weight: 400;
+    padding-right: 20px;
+    margin-top: 18px;
+
+}
+
+.navBar .name{
+    font-size: 1.8rem;
+    color: aliceblue;
+}
+
+.bgimg{
+height: 100vh;
+/* Radial gradient */
+
+background-color: aliceblue;
+
+
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid red; */
+    margin-top: 70px;
+    max-width: 80vw ;
+    min-height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.title h2{
+    line-height: 43px;
+}
+.title h1{
+    padding-bottom: 27px;
+}
+.start{
+    position: absolute;
+    top: 60vh;
+    left: 47vw;
+}
+
+body{
+    font-family: "Roboto Serif", serif;
+    font-weight: 200;
+
+}
+h1{
+    font-family: "Playfair Display", serif;
+
+}
