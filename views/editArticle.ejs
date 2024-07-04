@@ -13,14 +13,16 @@
         <h1>Edit Article</h1>
         <a href="/blog" class="btn btn-primary mb-5">All Articles</a>
     <form action="/editArticle" method="post">
+
         <div class="form-group">
           <label for="textInput">Title</label>
-          <input type="text" class="form-control" name="createText" id="textInput" placeholder="Enter text">
+          <input type="text" class="form-control" name="createText" id="textInput" placeholder="Enter text" value="<%= article.title %>">
         </div>
         <div class="mb-3 mt-3">
             <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-            <textarea   class="form-control" name="createDescription"  id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea   class="form-control" name="createDescription"  id="exampleFormControlTextarea1" rows="3"><%= article.description %> </textarea>
           </div>
+     
        <button type="submit" class="btn btn-success mt-3 ">Submit</button>
       </form>
     </div>

@@ -1,7 +1,6 @@
 const express = require('express');
 const {create, articles}= require('./routes/createArticles.js');
 const loginRouter=require('./routes/login.js');
-const edit = require('./routes/edit.js');
 const view=require('./routes/view.js');
 
 
@@ -18,7 +17,9 @@ app.get("/", (req, res) => {
 
 // this will triger when user clicks the button on landing page
 app.get("/blog", (req, res) => {
-  res.render("blog.ejs",{articles:articles});
+  const articleid=parseInt(req.params.id);
+  const articleToEdit=articles.find((a)=>a.id===articleid);
+  res.render("blog.ejs",{articles,article:articleToEdit});
 });
 
 // Sign in form
@@ -28,8 +29,22 @@ app.use("/login",loginRouter)
 app.use("/createArticle", create);
 
 // edit article route
-app.use("/editArticle",edit)
 
+app.get("/editArticle/:id",(req,res)=>{
+  const articleid=parseInt(req.params.id);
+const articleToEdit=articles.find((a)=>a.id===articleid);
+if (!articleToEdit) {
+  // Handle error (e.g., render an error page or redirect)
+  res.status(404).send("Article not found");
+  return;
+}
+else{
+  res.render('editArticle.ejs',{article:articleToEdit,});
+
+}
+})
+
+  
 //view article route
 app.use("/viewArticle",view)
 
