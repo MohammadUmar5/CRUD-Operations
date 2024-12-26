@@ -35,7 +35,7 @@ app.get("/editArticle/:id",(req,res)=>{
 const articleToEdit=articles.find((a)=>a.id===articleid);
 if (!articleToEdit) {
   // Handle error (e.g., render an error page or redirect)
-  res.status(404).send("Article not found");
+  res.status(404).send("Article not bsound");
   return;
 }
 else{
